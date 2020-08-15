@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>TOGGLE BAR</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        
+        body
+        {
+            background-image: url("https://www.xmple.com/wallpaper/linear-gradient-violet-pink-3840x2160-c2-d5caf0-f0cad9-a-255-f-14.svg");
+        }
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #slidebar
+        {
+            position: fixed;
+            height: 100%;
+            width: 300px;
+            transition: all 500ms linear;
+            background-color: dodgerblue;
+            left: -300px;
+        }
+        
+        #slidebar ul li
+        {
+            color: aliceblue;
+            list-style: none;
+            padding: 10px 5px;
+            border-bottom: 1px dotted white;
+            text-align: center;
+        }
+        
+        #slidebar ul li button
+        {
+            background-color: transparent;
+            border-style: none;
+            color: aliceblue;
+        }
+        
+        #slidebar ul a
+        {
+            font-size: 15px;
+            font-family: cursive;
+            color: aliceblue;
+            padding: 10px 10px;
+        }
+        
+        #slidebar .toggle-btn
+        {
+            position: absolute;
+            left:330px;
+            top:20px;
+        }
+        
+        #slidebar .toggle-btn span
+        {
+            background-color: orangered;
+            display: block;
+            width: 30px;
+            height: 5px;
+            margin: 5px 0px;
+        }
+        
+        #slidebar.active
+        {
+            left: 0px;
+        }
+        
+        #slidebar .logout
+        {
+            position: relative;
+            top:320px;
+            left: 140px;
+            padding: 10px 20px;
+            color: aliceblue;
+            background-color: red;
+            border-radius: 5px;
+            border-style: none;
+        }
+    </style>
+</head>
+    <body>
+        <div id = "slidebar">
+            <div class="toggle-btn" onclick="toggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul>
+                <a href = "https://www.google.com/"><i class="fa fa-user-circle" aria-hidden="true"></i>  WELCOME: Anik Chakraborty</a>
+                <a href="#"><li><i class="fa fa-home" aria-hidden="true"></i>  HOME </li></a>
+                <a href="#"><li><i class="fa fa-info" aria-hidden="true"></i>  ABOUT </li></a>
+                <a href="#"><li><i class="fa fa-group" aria-hidden="true"></i>  CONTACT US </li></a>
+            </ul>
+            
+            <button class = "logout">LOGOUT  <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+        </div>
+        
+        <script>
+            function toggle()
+            {
+                document.getElementById("slidebar").classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
