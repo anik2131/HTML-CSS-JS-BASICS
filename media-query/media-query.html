@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MEDIA QUERY</title>
+        
+        <style>
+            *
+            {
+                margin: 0px;
+            }
+            .bar
+            {
+                background-color: aquamarine;
+                height: 48px;
+            }
+            
+            .bar a
+            {
+                padding: 15px 15px;
+                display: block;
+                float: left;
+                color: forestgreen;
+                background-color: aquamarine;
+                text-decoration: none;
+            }
+            
+            .bar h4
+            {
+                display: block;
+                float: left;
+                margin-top: 14px;
+                margin-left: 15px;
+                color: darkmagenta;
+            }
+            
+            .bar a:hover
+            {
+                padding: 15px 15px;
+                display: block;
+                float: left;
+                color: forestgreen;
+                background-color: aliceblue;
+                text-decoration: none;
+            }
+            
+            @media screen and (max-width: 600px)
+            {
+                 .bar h4
+                 {
+                    float: none;
+                    display: block;
+                    width: 100%;
+                    color: dodgerblue;
+                     margin: 0px;
+                     text-align: center;
+                     padding: 10px 10px;
+                }
+                
+                .bar a
+                {
+                    padding: 15px 15px;
+                    display: block;
+                    float: none;
+                    color: forestgreen;
+                    background-color: aquamarine;
+                    width: 100%;
+                    text-decoration: none;
+                    text-align: center;
+                }
+                
+                .bar a:hover
+                {
+                    padding: 15px 15px;
+                    display: block;
+                    float: none;
+                    color: forestgreen;
+                    background-color: aliceblue;
+                    width: 100%;
+                    text-decoration: none;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class = "bar">
+            <h4>ZONIX TECH</h4>
+            <a href = "#">LINK-1</a>
+            <a href = "#">LINK-2</a>
+            <a href = "#">LINK-3</a>
+        </div>
+    </body>
