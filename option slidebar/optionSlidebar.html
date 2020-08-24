@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>IMAGE KHELA</title>
+        
+        <style>
+            #container
+            {
+                height: 350px;
+                width: 390px;
+                margin-top: 20px;
+                margin-left: 30px;
+            }
+            
+            .image
+            {
+                height:34%;
+                width:31%;
+            }
+            
+            #navbar
+            {
+                width:100%;
+                height:30px;
+            }
+            
+            #navbar a
+            {
+                margin-left: 5px;
+                position: relative;
+            }
+            #navbar #about
+            {
+                border-bottom: 2px solid blue;
+                background-color: transparent;
+                border-left-style: none;
+                border-right-style: none;
+                border-top-style: none;
+            }
+            
+            #navbar #skills
+            {
+                border-bottom-style: none;
+                background-color: transparent;
+                border-left-style: none;
+                border-right-style: none;
+                border-top-style: none;
+            }
+            #division1
+            {
+                margin-left: 5px;
+            }
+            
+            #division2
+            {
+                margin-left: 5px;
+                display: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id = "container">
+            <img class="image" src = "https://tse2.mm.bing.net/th?id=OIP.9MP6Ay6_6_Tl10hRPywFsAAAAA&pid=Api&P=0&w=300&h=300">
+            <div id = "navbar">
+                <a><button onclick="showAbout()" id = "about">ABOUT</button></a>
+                <a><button onclick="showSkills()" id = "skills">SKILLS</button></a>
+            </div>
+                
+            <div id = "division1">
+                <h5><label>Name: </label><label>ABC</label></h5>
+                <h5><label>Age: </label><label>22</label></h5>
+                <h5><label>College: </label><label>D.E.F.G.H</label></h5>
+                <h5><label>Company: </label><label>XYZ</label></h5>
+            </div>
+            
+             <div id = "division2">
+                <h5><label>Skills: </label><label>Web Developement</label></h5>
+                <h5><label>Interests: </label><label>Playing Guitar</label></h5>
+                <h5><label>Hobbies: </label><label>Gaming , Keyboard Playing</label></h5>
+                <h5><label>Status: </label><label>Associate Manager</label></h5>
+            </div>
+        </div>
+        
+        <script>
+            function showAbout()
+            {
+                document.getElementById("division1").style.display = "block";
+                document.getElementById("division2").style.display = "none";
+                document.getElementById("skills").style.borderBottom = "none";
+                document.getElementById("about").style.borderBottom = "2px solid blue";
+                
+            }
+            
+            function showSkills()
+            {
+                 document.getElementById("division2").style.display = "block";
+                document.getElementById("division1").style.display = "none";
+                document.getElementById("skills").style.borderBottom = "2px solid blue";
+                document.getElementById("about").style.borderBottom = "none";
+            }
+        </script>
+    </body>
+</html>
